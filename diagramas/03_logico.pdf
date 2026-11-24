@@ -1,0 +1,84 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 1 /Kids [5 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1000 650] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 2681 >>
+stream
+0.10 0.21 0.34 rg BT /F2 23 Tf 30 608 Td (Diagrama l\363gico) Tj ET
+0.3 0.3 0.3 rg BT /F1 11 Tf 30 587 Td (MySQL | PK: chave prim\341ria | FK: chave estrangeira | UQ: \372nico) Tj ET
+0 0 0 rg 0.20 0.32 0.44 RG
+330 335 m 373 335 l S
+650 335 m 685 335 l S
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 30 160 300 390 re B
+0.82 0.88 0.93 rg 30 525 300 25 re f
+0 0 0 rg BT /F2 13 Tf 39 533 Td (cliente) Tj ET
+BT /F1 12 Tf 39 509 Td (PK id_cliente INT AUTO_INCREMENT) Tj ET
+BT /F1 12 Tf 39 493 Td (nome VARCHAR\(100\) NOT NULL) Tj ET
+BT /F1 12 Tf 39 477 Td (UQ cpf VARCHAR\(11\) NOT NULL) Tj ET
+BT /F1 12 Tf 39 461 Td (data_nascimento DATE) Tj ET
+BT /F1 12 Tf 39 445 Td (telefone VARCHAR\(20\)) Tj ET
+BT /F1 12 Tf 39 429 Td (endereco VARCHAR\(150\)) Tj ET
+BT /F1 12 Tf 39 413 Td (bairro VARCHAR\(80\)) Tj ET
+BT /F1 12 Tf 39 397 Td (cidade VARCHAR\(80\)) Tj ET
+BT /F1 12 Tf 39 381 Td (estado VARCHAR\(2\)) Tj ET
+BT /F1 12 Tf 39 365 Td (cep VARCHAR\(9\)) Tj ET
+BT /F1 12 Tf 39 349 Td (status BOOLEAN DEFAULT TRUE) Tj ET
+BT /F1 12 Tf 39 333 Td (data_alteracao TIMESTAMP) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 373 160 277 390 re B
+0.82 0.88 0.93 rg 373 525 277 25 re f
+0 0 0 rg BT /F2 13 Tf 382 533 Td (animal) Tj ET
+BT /F1 11.5 Tf 382 509 Td (PK id_animal INT AUTO_INCREMENT) Tj ET
+BT /F1 11.5 Tf 382 493.5 Td (nome VARCHAR\(100\) NOT NULL) Tj ET
+BT /F1 11.5 Tf 382 478 Td (data_nascimento DATE) Tj ET
+BT /F1 11.5 Tf 382 462.5 Td (sexo CHAR\(1\) CHECK M/F) Tj ET
+BT /F1 11.5 Tf 382 447 Td (cor VARCHAR\(50\)) Tj ET
+BT /F1 11.5 Tf 382 431.5 Td (observacoes VARCHAR\(255\)) Tj ET
+BT /F1 11.5 Tf 382 416 Td (FK id_cliente INT NOT NULL) Tj ET
+BT /F1 11.5 Tf 382 400.5 Td (FK id_raca INT NOT NULL) Tj ET
+BT /F1 11.5 Tf 382 385 Td (status BOOLEAN DEFAULT TRUE) Tj ET
+BT /F1 11.5 Tf 382 369.5 Td (data_alteracao TIMESTAMP) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 685 160 285 390 re B
+0.82 0.88 0.93 rg 685 525 285 25 re f
+0 0 0 rg BT /F2 13 Tf 694 533 Td (raca) Tj ET
+BT /F1 11.5 Tf 694 509 Td (PK id_raca INT AUTO_INCREMENT) Tj ET
+BT /F1 11.5 Tf 694 493.5 Td (nome_raca VARCHAR\(80\) NOT NULL) Tj ET
+BT /F1 11.5 Tf 694 478 Td (tipo_animal VARCHAR\(10\) NOT NULL) Tj ET
+BT /F1 11.5 Tf 694 462.5 Td (status BOOLEAN DEFAULT TRUE) Tj ET
+BT /F1 11.5 Tf 694 447 Td (data_alteracao TIMESTAMP) Tj ET
+BT /F1 11.5 Tf 694 431.5 Td (UQ \(nome_raca, tipo_animal\)) Tj ET
+BT /F1 11.5 Tf 694 416 Td (CHECK Cachorro ou Gato) Tj ET
+BT /F2 11 Tf 334 349 Td (1) Tj ET
+BT /F2 11 Tf 344 317 Td (N) Tj ET
+BT /F2 11 Tf 654 349 Td (N) Tj ET
+BT /F2 11 Tf 670 317 Td (1) Tj ET
+BT /F1 13 Tf 30 105 Td (animal.id_cliente referencia cliente.id_cliente) Tj ET
+BT /F1 13 Tf 30 80 Td (animal.id_raca referencia raca.id_raca) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000212 00000 n 
+0000000314 00000 n 
+0000000451 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3183
+%%EOF

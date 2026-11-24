@@ -1,0 +1,194 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 1 /Kids [5 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1660 1070] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 8091 >>
+stream
+0.10 0.21 0.34 rg BT /F2 23 Tf 30 1028 Td (Diagrama de classes UML) Tj ET
+0.3 0.3 0.3 rg BT /F1 11 Tf 30 1007 Td (Classes principais, atributos, opera\347\365es e depend\352ncias | + p\372blico; - privado; # protegido) Tj ET
+0 0 0 rg 0.20 0.32 0.44 RG
+0.35 0.45 0.54 RG 1 w
+180 760 m 180 795 l S
+180 795 m 830 795 l S
+500 760 m 500 795 l S
+500 795 m 830 795 l S
+820 760 m 820 795 l S
+820 795 m 830 795 l S
+1140 760 m 1140 795 l S
+1140 795 m 830 795 l S
+1470 760 m 1470 795 l S
+1470 795 m 830 795 l S
+830 795 m 830 820 l S
+830 832 m 823 820 l 837 820 l h S
+320 905 m 650 905 l S
+BT /F1 11 Tf 372 913 Td (cria os cinco pain\351is) Tj ET
+[4 3] 0 d
+180 600 m 180 515 l S
+500 600 m 500 515 l S
+820 600 m 820 515 l S
+1140 600 m 500 515 l S
+1470 600 m 1470 515 l S
+180 355 m 180 265 l S
+500 355 m 500 265 l S
+820 355 m 820 265 l S
+180 355 m 180 320 l S
+180 320 m 1140 320 l S
+500 355 m 500 320 l S
+500 320 m 1140 320 l S
+820 355 m 820 320 l S
+820 320 m 1140 320 l S
+1470 355 m 1470 320 l S
+1470 320 m 1140 320 l S
+1140 320 m 1140 355 l S
+[] 0 d
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 30 832 290 145 re B
+0.82 0.88 0.93 rg 30 952 290 25 re f
+0 0 0 rg BT /F2 13 Tf 39 960 Td (Main) Tj ET
+BT /F1 11 Tf 39 936 Td (+ Main\(\)) Tj ET
+BT /F1 11 Tf 39 921 Td (+ main\(String[]\): void) Tj ET
+BT /F1 11 Tf 39 906 Td (extends JFrame) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 650 832 360 145 re B
+0.82 0.88 0.93 rg 650 952 360 25 re f
+0 0 0 rg BT /F2 13 Tf 659 960 Td (PainelBase) Tj ET
+BT /F1 11 Tf 659 936 Td (+ recarregar\(\): void \(abstrato\)) Tj ET
+BT /F1 11 Tf 659 921 Td (# campo\(...\); modeloTabela\(...\)) Tj ET
+BT /F1 11 Tf 659 906 Td (# info\(...\); erro\(...\); confirmar\(...\)) Tj ET
+BT /F1 11 Tf 659 891 Td (# texto\(String\): String) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 30 600 300 160 re B
+0.82 0.88 0.93 rg 30 735 300 25 re f
+0 0 0 rg BT /F2 13 Tf 39 743 Td (ClientePanel) Tj ET
+BT /F1 11 Tf 39 719 Td (- dao: ClienteDAO) Tj ET
+BT /F1 11 Tf 39 704 Td (- lista: List<Cliente>) Tj ET
+BT /F1 11 Tf 39 689 Td (- selecionado: Cliente) Tj ET
+BT /F1 11 Tf 39 674 Td (+ recarregar\(\); ClientePanel\(\)) Tj ET
+BT /F1 11 Tf 39 659 Td (- salvar\(\); limpar\(\); alterarStatus\(...\)) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 350 600 300 160 re B
+0.82 0.88 0.93 rg 350 735 300 25 re f
+0 0 0 rg BT /F2 13 Tf 359 743 Td (AnimalPanel) Tj ET
+BT /F1 11 Tf 359 719 Td (- dao: AnimalDAO) Tj ET
+BT /F1 11 Tf 359 704 Td (- clienteDao; racaDao) Tj ET
+BT /F1 11 Tf 359 689 Td (- selecionado: Animal) Tj ET
+BT /F1 11 Tf 359 674 Td (+ recarregar\(\); AnimalPanel\(\)) Tj ET
+BT /F1 11 Tf 359 659 Td (- salvar\(\); limpar\(\); alterarStatus\(...\)) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 670 600 300 160 re B
+0.82 0.88 0.93 rg 670 735 300 25 re f
+0 0 0 rg BT /F2 13 Tf 679 743 Td (RacaPanel) Tj ET
+BT /F1 11 Tf 679 719 Td (- dao: RacaDAO) Tj ET
+BT /F1 11 Tf 679 704 Td (- lista: List<Raca>) Tj ET
+BT /F1 11 Tf 679 689 Td (- selecionada: Raca) Tj ET
+BT /F1 11 Tf 679 674 Td (+ recarregar\(\); RacaPanel\(\)) Tj ET
+BT /F1 11 Tf 679 659 Td (- salvar\(\); limpar\(\); alterarStatus\(...\)) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 990 600 300 160 re B
+0.82 0.88 0.93 rg 990 735 300 25 re f
+0 0 0 rg BT /F2 13 Tf 999 743 Td (ConsultaPanel) Tj ET
+BT /F1 11 Tf 999 719 Td (- dao: AnimalDAO) Tj ET
+BT /F1 11 Tf 999 704 Td (+ ConsultaPanel\(\); recarregar\(\)) Tj ET
+BT /F1 11 Tf 999 689 Td (- consultar\(\): void) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 1310 600 320 160 re B
+0.82 0.88 0.93 rg 1310 735 320 25 re f
+0 0 0 rg BT /F2 13 Tf 1319 743 Td (RelatorioPanel) Tj ET
+BT /F1 11 Tf 1319 719 Td (- dao: RelatorioDAO) Tj ET
+BT /F1 11 Tf 1319 704 Td (+ RelatorioPanel\(\); recarregar\(\)) Tj ET
+BT /F1 11 Tf 1319 689 Td (- gerar\(String, int\): void) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 30 355 300 160 re B
+0.82 0.88 0.93 rg 30 490 300 25 re f
+0 0 0 rg BT /F2 13 Tf 39 498 Td (ClienteDAO) Tj ET
+BT /F1 11 Tf 39 474 Td (+ salvar\(Cliente\): void) Tj ET
+BT /F1 11 Tf 39 459 Td (+ listar\(boolean\): List<Cliente>) Tj ET
+BT /F1 11 Tf 39 444 Td (+ alterarStatus\(int, boolean\): void) Tj ET
+BT /F1 11 Tf 39 429 Td (- validar\(Cliente\): void) Tj ET
+BT /F1 11 Tf 39 414 Td (- inserir/alterar/mapear) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 350 355 300 160 re B
+0.82 0.88 0.93 rg 350 490 300 25 re f
+0 0 0 rg BT /F2 13 Tf 359 498 Td (AnimalDAO) Tj ET
+BT /F1 11 Tf 359 474 Td (+ salvar\(Animal\): void) Tj ET
+BT /F1 11 Tf 359 459 Td (+ listar\(boolean\): List<Animal>) Tj ET
+BT /F1 11 Tf 359 444 Td (+ consultarPorCliente\(...\): List<Animal>) Tj ET
+BT /F1 11 Tf 359 429 Td (+ alterarStatus\(int, boolean\): void) Tj ET
+BT /F1 11 Tf 359 414 Td (- inserir/alterar/mapear) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 670 355 300 160 re B
+0.82 0.88 0.93 rg 670 490 300 25 re f
+0 0 0 rg BT /F2 13 Tf 679 498 Td (RacaDAO) Tj ET
+BT /F1 11 Tf 679 474 Td (+ salvar\(Raca\): void) Tj ET
+BT /F1 11 Tf 679 459 Td (+ listar\(boolean\): List<Raca>) Tj ET
+BT /F1 11 Tf 679 444 Td (+ alterarStatus\(int, boolean\): void) Tj ET
+BT /F1 11 Tf 679 429 Td (- validar/inserir/alterar) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 1310 355 320 160 re B
+0.82 0.88 0.93 rg 1310 490 320 25 re f
+0 0 0 rg BT /F2 13 Tf 1319 498 Td (RelatorioDAO) Tj ET
+BT /F1 11 Tf 1319 474 Td (+ gerarClientesEAnimais\(Path\): int) Tj ET
+BT /F1 11 Tf 1319 459 Td (+ gerarAnimaisAniversariantes\(int, Path\): int) Tj ET
+BT /F1 11 Tf 1319 444 Td (+ gerarClientesAniversariantes\(int, Path\): int) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 990 355 300 160 re B
+0.82 0.88 0.93 rg 990 490 300 25 re f
+0 0 0 rg BT /F2 13 Tf 999 498 Td (ConnectionFactory) Tj ET
+BT /F1 11 Tf 999 474 Td (+ getConnection\(\): Connection) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 30 85 300 180 re B
+0.82 0.88 0.93 rg 30 240 300 25 re f
+0 0 0 rg BT /F2 13 Tf 39 248 Td (Cliente) Tj ET
+BT /F1 11 Tf 39 224 Td (- id: int; nome, cpf: String) Tj ET
+BT /F1 11 Tf 39 209 Td (- dataNascimento: LocalDate) Tj ET
+BT /F1 11 Tf 39 194 Td (- telefone, endereco, bairro: String) Tj ET
+BT /F1 11 Tf 39 179 Td (- cidade, estado, cep: String) Tj ET
+BT /F1 11 Tf 39 164 Td (- status: boolean) Tj ET
+BT /F1 11 Tf 39 149 Td (+ getters/setters; toString\(\)) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 350 85 300 180 re B
+0.82 0.88 0.93 rg 350 240 300 25 re f
+0 0 0 rg BT /F2 13 Tf 359 248 Td (Animal) Tj ET
+BT /F1 11 Tf 359 224 Td (- id, idCliente, idRaca: int) Tj ET
+BT /F1 11 Tf 359 209 Td (- nome, cor, observacoes: String) Tj ET
+BT /F1 11 Tf 359 194 Td (- dataNascimento: LocalDate) Tj ET
+BT /F1 11 Tf 359 179 Td (- sexo: char; status: boolean) Tj ET
+BT /F1 11 Tf 359 164 Td (- nomeCliente, nomeRaca: String) Tj ET
+BT /F1 11 Tf 359 149 Td (+ getters/setters; getIdade\(\): String) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 670 85 300 180 re B
+0.82 0.88 0.93 rg 670 240 300 25 re f
+0 0 0 rg BT /F2 13 Tf 679 248 Td (Raca) Tj ET
+BT /F1 11 Tf 679 224 Td (- id: int; nome, tipoAnimal: String) Tj ET
+BT /F1 11 Tf 679 209 Td (- status: boolean) Tj ET
+BT /F1 11 Tf 679 194 Td (+ CACHORRO, GATO: String) Tj ET
+BT /F1 11 Tf 679 179 Td (+ getters/setters; toString\(\)) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 990 85 300 180 re B
+0.82 0.88 0.93 rg 990 240 300 25 re f
+0 0 0 rg BT /F2 13 Tf 999 248 Td (CpfValidador) Tj ET
+BT /F1 11 Tf 999 224 Td (+ somenteDigitos\(String\): String) Tj ET
+BT /F1 11 Tf 999 209 Td (+ formatar\(String\): String) Tj ET
+BT /F1 11 Tf 999 194 Td (+ validar\(String\): boolean) Tj ET
+0.13 0.24 0.37 RG 0.95 0.97 0.99 rg 1310 85 320 180 re B
+0.82 0.88 0.93 rg 1310 240 320 25 re f
+0 0 0 rg BT /F2 13 Tf 1319 248 Td (Datas) Tj ET
+BT /F1 11 Tf 1319 224 Td (+ converter\(String\): LocalDate) Tj ET
+BT /F1 11 Tf 1319 209 Td (+ formatar\(LocalDate\): String) Tj ET
+BT /F1 11 Tf 1319 194 Td (+ deSql\(Date\): LocalDate) Tj ET
+BT /F1 11 Tf 1319 179 Td (+ paraSql\(LocalDate\): Date) Tj ET
+BT /F1 13 Tf 30 48 Td (Heran\347a: pain\351is -> PainelBase. Depend\352ncias: GUI -> DAO -> modelo / ConnectionFactory. Animal referencia Cliente e Raca por ID.) Tj ET
+BT /F1 13 Tf 30 26 Td (Cliente usa CpfValidador; DAOs e pain\351is usam Datas; AnimalPanel tamb\351m usa ClienteDAO e RacaDAO.) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000212 00000 n 
+0000000314 00000 n 
+0000000452 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+8594
+%%EOF

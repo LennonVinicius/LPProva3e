@@ -1,0 +1,13 @@
+RELATÓRIO - TODOS OS CLIENTES E SEUS ANIMAIS
+------------------------------------------------------------
+
+Cliente: Carlos Almeida | CPF: 529.982.247-25
+   Animal: Nina | Raça: SRD | Nascimento: 02/11/2022
+   Animal: Thor | Raça: Labrador | Nascimento: 05/03/2019
+
+Cliente: Mariana Souza | CPF: 111.444.777-35
+   Animal: Luna | Raça: Poodle | Nascimento: 10/11/2021
+   Animal: Mia | Raça: Siamês | Nascimento: 20/03/2020
+
+Cliente: Roberto Lima | CPF: 123.456.789-09
+   Animal: Bob | Raça: SRD | Nascimento: 14/07/2018
