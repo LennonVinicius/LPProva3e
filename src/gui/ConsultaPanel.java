@@ -44,6 +44,7 @@ public class ConsultaPanel extends PainelBase {
         add(new JScrollPane(new JTable(modelo)), BorderLayout.CENTER);
 
         btnBuscar.addActionListener(e -> consultar());
+        chkInativos.addActionListener(e -> consultar());
         btnLimpar.addActionListener(e -> {
             txtNome.setText("");
             txtCpf.setText("");

@@ -87,7 +87,7 @@ public class AnimalDAO {
     }
 
     public List<Animal> listar(boolean incluirInativos) throws SQLException {
-        String sql = SELECT + (incluirInativos ? "" : "WHERE a.status = TRUE AND c.status = TRUE ") + "ORDER BY a.nome";
+        String sql = SELECT + (incluirInativos ? "" : "WHERE a.status = TRUE AND c.status = TRUE AND r.status = TRUE ") + "ORDER BY a.nome";
         List<Animal> lista = new ArrayList<>();
         try (Connection con = ConnectionFactory.getConnection();
              PreparedStatement ps = con.prepareStatement(sql);
@@ -101,7 +101,7 @@ public class AnimalDAO {
 
     public List<Animal> consultarPorCliente(String nomeCliente, String cpf, boolean incluirInativos) throws SQLException {
         String sql = SELECT + "WHERE c.nome LIKE ? AND c.cpf LIKE ? "
-                + (incluirInativos ? "" : "AND a.status = TRUE AND c.status = TRUE ") + "ORDER BY c.nome, a.nome";
+                + (incluirInativos ? "" : "AND a.status = TRUE AND c.status = TRUE AND r.status = TRUE ") + "ORDER BY c.nome, a.nome";
         List<Animal> lista = new ArrayList<>();
         try (Connection con = ConnectionFactory.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {

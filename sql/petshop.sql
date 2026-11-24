@@ -1,11 +1,7 @@
 CREATE DATABASE IF NOT EXISTS petshop CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE petshop;
 
-DROP TABLE IF EXISTS animal;
-DROP TABLE IF EXISTS raca;
-DROP TABLE IF EXISTS cliente;
-
-CREATE TABLE cliente (
+CREATE TABLE IF NOT EXISTS cliente (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cpf VARCHAR(11) NOT NULL UNIQUE,
@@ -20,7 +16,7 @@ CREATE TABLE cliente (
     data_alteracao TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 );
 
-CREATE TABLE raca (
+CREATE TABLE IF NOT EXISTS raca (
     id_raca INT AUTO_INCREMENT PRIMARY KEY,
     nome_raca VARCHAR(80) NOT NULL,
     tipo_animal VARCHAR(10) NOT NULL,
@@ -30,7 +26,7 @@ CREATE TABLE raca (
     CONSTRAINT ck_tipo_animal CHECK (tipo_animal IN ('Cachorro', 'Gato'))
 );
 
-CREATE TABLE animal (
+CREATE TABLE IF NOT EXISTS animal (
     id_animal INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     data_nascimento DATE,
@@ -46,22 +42,35 @@ CREATE TABLE animal (
     CONSTRAINT ck_sexo CHECK (sexo IN ('M', 'F'))
 );
 
-INSERT INTO cliente (nome, cpf, data_nascimento, telefone, endereco, bairro, cidade, estado, cep) VALUES
-('Carlos Almeida', '52998224725', '1985-03-12', '(12) 99111-2233', 'Rua das Flores, 120', 'Centro', 'São José dos Campos', 'SP', '12210-000'),
-('Mariana Souza', '11144477735', '1992-11-25', '(12) 99222-3344', 'Av. Cassiano Ricardo, 800', 'Jardim Aquarius', 'São José dos Campos', 'SP', '12246-870'),
-('Roberto Lima', '12345678909', '1978-03-30', '(12) 99333-4455', 'Rua Sete de Setembro, 45', 'Vila Industrial', 'São José dos Campos', 'SP', '12220-100');
+INSERT INTO cliente (nome, cpf, data_nascimento, telefone, endereco, bairro, cidade, estado, cep)
+SELECT dados.nome, dados.cpf, dados.nascimento, dados.telefone, dados.endereco, dados.bairro, dados.cidade, dados.estado, dados.cep
+FROM (
+    SELECT 'Carlos Almeida' AS nome, '52998224725' AS cpf, '1985-03-12' AS nascimento, '(12) 99111-2233' AS telefone, 'Rua das Flores, 120' AS endereco, 'Centro' AS bairro, 'São José dos Campos' AS cidade, 'SP' AS estado, '12210-000' AS cep
+    UNION ALL SELECT 'Mariana Souza', '11144477735', '1992-11-25', '(12) 99222-3344', 'Av. Cassiano Ricardo, 800', 'Jardim Aquarius', 'São José dos Campos', 'SP', '12246-870'
+    UNION ALL SELECT 'Roberto Lima', '12345678909', '1978-03-30', '(12) 99333-4455', 'Rua Sete de Setembro, 45', 'Vila Industrial', 'São José dos Campos', 'SP', '12220-100'
+) dados
+WHERE NOT EXISTS (SELECT 1 FROM cliente c WHERE c.cpf = dados.cpf);
 
-INSERT INTO raca (nome_raca, tipo_animal) VALUES
-('Labrador', 'Cachorro'),
-('Poodle', 'Cachorro'),
-('SRD', 'Cachorro'),
-('Siamês', 'Gato'),
-('Persa', 'Gato'),
-('SRD', 'Gato');
+INSERT INTO raca (nome_raca, tipo_animal)
+SELECT dados.nome, dados.tipo FROM (
+    SELECT 'Labrador' AS nome, 'Cachorro' AS tipo
+    UNION ALL SELECT 'Poodle', 'Cachorro'
+    UNION ALL SELECT 'SRD', 'Cachorro'
+    UNION ALL SELECT 'Siamês', 'Gato'
+    UNION ALL SELECT 'Persa', 'Gato'
+    UNION ALL SELECT 'SRD', 'Gato'
+) dados
+WHERE NOT EXISTS (SELECT 1 FROM raca r WHERE r.nome_raca = dados.nome AND r.tipo_animal = dados.tipo);
 
-INSERT INTO animal (nome, data_nascimento, sexo, cor, observacoes, id_cliente, id_raca) VALUES
-('Thor', '2019-03-05', 'M', 'Caramelo', 'Muito brincalhão', 1, 1),
-('Luna', '2021-11-10', 'F', 'Branca', 'Alérgica a shampoo comum', 2, 2),
-('Mia', '2020-03-20', 'F', 'Cinza', NULL, 2, 4),
-('Bob', '2018-07-14', 'M', 'Preto', 'Idoso', 3, 3),
-('Nina', '2022-11-02', 'F', 'Tigrada', NULL, 1, 6);
+INSERT INTO animal (nome, data_nascimento, sexo, cor, observacoes, id_cliente, id_raca)
+SELECT dados.nome, dados.nascimento, dados.sexo, dados.cor, dados.observacoes, c.id_cliente, r.id_raca
+FROM (
+    SELECT 'Thor' AS nome, '2019-03-05' AS nascimento, 'M' AS sexo, 'Caramelo' AS cor, 'Muito brincalhão' AS observacoes, '52998224725' AS cpf, 'Labrador' AS raca, 'Cachorro' AS tipo
+    UNION ALL SELECT 'Luna', '2021-11-10', 'F', 'Branca', 'Alérgica a shampoo comum', '11144477735', 'Poodle', 'Cachorro'
+    UNION ALL SELECT 'Mia', '2020-03-20', 'F', 'Cinza', NULL, '11144477735', 'Siamês', 'Gato'
+    UNION ALL SELECT 'Bob', '2018-07-14', 'M', 'Preto', 'Idoso', '12345678909', 'SRD', 'Cachorro'
+    UNION ALL SELECT 'Nina', '2022-11-02', 'F', 'Tigrada', NULL, '52998224725', 'SRD', 'Gato'
+) dados
+JOIN cliente c ON c.cpf = dados.cpf
+JOIN raca r ON r.nome_raca = dados.raca AND r.tipo_animal = dados.tipo
+WHERE NOT EXISTS (SELECT 1 FROM animal a WHERE a.id_cliente = c.id_cliente AND a.nome = dados.nome AND a.data_nascimento = dados.nascimento);

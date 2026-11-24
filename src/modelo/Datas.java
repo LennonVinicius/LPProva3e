@@ -29,7 +29,11 @@ public class Datas {
             return null;
         }
         try {
-            return LocalDate.parse(texto.trim(), FORMATO.withResolverStyle(java.time.format.ResolverStyle.STRICT));
+            LocalDate data = LocalDate.parse(texto.trim(), FORMATO.withResolverStyle(java.time.format.ResolverStyle.STRICT));
+            if (data.isAfter(LocalDate.now())) {
+                throw new IllegalArgumentException("A data de nascimento não pode ser futura.");
+            }
+            return data;
         } catch (DateTimeParseException e) {
             throw new IllegalArgumentException("Data inválida. Use o formato dd/MM/aaaa.");
         }

@@ -89,8 +89,7 @@ public class AnimalPanel extends PainelBase {
     @Override
     public void recarregar() {
         try {
-            Cliente clienteAtual = (Cliente) cmbCliente.getSelectedItem();
-            Raca racaAtual = (Raca) cmbRaca.getSelectedItem();
+            limpar();
             cmbCliente.removeAllItems();
             for (Cliente c : clienteDao.listar(false)) {
                 cmbCliente.addItem(c);
@@ -99,8 +98,8 @@ public class AnimalPanel extends PainelBase {
             for (Raca r : racaDao.listar(false)) {
                 cmbRaca.addItem(r);
             }
-            selecionarCliente(clienteAtual == null ? 0 : clienteAtual.getId());
-            selecionarRaca(racaAtual == null ? 0 : racaAtual.getId());
+            cmbCliente.setSelectedIndex(-1);
+            cmbRaca.setSelectedIndex(-1);
 
             lista = dao.listar(chkInativos.isSelected());
             modelo.setRowCount(0);
@@ -139,6 +138,8 @@ public class AnimalPanel extends PainelBase {
         cmbSexo.setSelectedItem(String.valueOf(a.getSexo()));
         txtCor.setText(texto(a.getCor()));
         txtObservacoes.setText(texto(a.getObservacoes()));
+        cmbCliente.setSelectedIndex(-1);
+        cmbRaca.setSelectedIndex(-1);
         selecionarCliente(a.getIdCliente());
         selecionarRaca(a.getIdRaca());
     }
@@ -150,6 +151,8 @@ public class AnimalPanel extends PainelBase {
         cmbSexo.setSelectedIndex(0);
         txtCor.setText("");
         txtObservacoes.setText("");
+        cmbCliente.setSelectedIndex(-1);
+        cmbRaca.setSelectedIndex(-1);
         tabela.clearSelection();
     }
 

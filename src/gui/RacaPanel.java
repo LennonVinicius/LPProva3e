@@ -73,6 +73,7 @@ public class RacaPanel extends PainelBase {
 
     @Override
     public void recarregar() {
+        limpar();
         try {
             lista = dao.listar(chkInativos.isSelected());
             modelo.setRowCount(0);

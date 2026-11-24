@@ -20,9 +20,9 @@ public class RelatorioDAO {
 
     public int gerarClientesEAnimais(Path arquivo) throws SQLException, IOException {
         String sql = "SELECT c.nome AS cliente, c.cpf, a.nome AS animal, r.nome_raca, a.data_nascimento "
-                + "FROM cliente c LEFT JOIN animal a ON a.id_cliente = c.id_cliente AND a.status = TRUE "
+                + "FROM cliente c LEFT JOIN animal a ON a.id_cliente = c.id_cliente AND a.status = TRUE AND EXISTS (SELECT 1 FROM raca rr WHERE rr.id_raca = a.id_raca AND rr.status = TRUE) "
                 + "LEFT JOIN raca r ON r.id_raca = a.id_raca "
-                + "WHERE c.status = TRUE ORDER BY c.nome, a.nome";
+                + "WHERE c.status = TRUE ORDER BY c.nome, c.id_cliente, a.nome";
         int clientes = 0;
         try (Connection con = ConnectionFactory.getConnection();
              PreparedStatement ps = con.prepareStatement(sql);
@@ -57,8 +57,8 @@ public class RelatorioDAO {
 
     public int gerarAnimaisAniversariantes(int mes, Path arquivo) throws SQLException, IOException {
         String sql = "SELECT a.nome AS animal, c.nome AS cliente, c.telefone, a.data_nascimento "
-                + "FROM animal a JOIN cliente c ON c.id_cliente = a.id_cliente "
-                + "WHERE a.status = TRUE AND c.status = TRUE AND MONTH(a.data_nascimento) = ? "
+                + "FROM animal a JOIN cliente c ON c.id_cliente = a.id_cliente JOIN raca r ON r.id_raca = a.id_raca "
+                + "WHERE a.status = TRUE AND c.status = TRUE AND r.status = TRUE AND MONTH(a.data_nascimento) = ? "
                 + "ORDER BY DAY(a.data_nascimento), a.nome";
         int total = 0;
         try (Connection con = ConnectionFactory.getConnection();
