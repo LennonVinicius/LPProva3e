@@ -1,0 +1,204 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 6 /Kids [5 0 R 8 0 R 11 0 R 14 0 R 17 0 R 20 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >>  >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1071 >>
+stream
+0.10 0.21 0.34 rg BT /F2 11 Tf 36 790 Td (CADASTRO DE CLIENTES E ANIMAIS) Tj ET
+BT /F2 24 Tf 36 753 Td (Instala\347\343o e acesso) Tj ET
+0 0 0 rg
+BT /F1 12 Tf 36 710 Td (Requisitos: Java 17, Maven e MySQL.) Tj ET
+BT /F1 12 Tf 36 687 Td (1. Inicie o MySQL. Abra o terminal na pasta do projeto.) Tj ET
+BT /F1 12 Tf 36 664 Td (2. Importe o banco com: mysql -u root -p < sql/petshop.sql) Tj ET
+BT /F1 12 Tf 36 641 Td (3. Configure o usu\341rio e a senha do MySQL localmente.) Tj ET
+BT /F1 12 Tf 36 618 Td (No Linux, execute no mesmo terminal:) Tj ET
+BT /F1 12 Tf 36 595 Td (export PETSHOP_DB_USER=root) Tj ET
+BT /F1 12 Tf 36 572 Td (read -rsp 'Senha do MySQL: ' PETSHOP_DB_PASSWORD) Tj ET
+BT /F1 12 Tf 36 549 Td (export PETSHOP_DB_PASSWORD; echo) Tj ET
+BT /F1 12 Tf 36 526 Td (mvn compile exec:java) Tj ET
+BT /F1 12 Tf 36 503 Td (A aplica\347\343o abrir\341 uma janela com cinco abas.) Tj ET
+BT /F1 12 Tf 36 480 Td (As imagens seguintes mostram telas com dados de demonstra\347\343o.) Tj ET
+BT /F1 10 Tf 36 30 Td (Manual do usu\341rio) Tj ET
+BT /F1 10 Tf 535 30 Td (1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /XObject /Subtype /Image /Width 480 /Height 303 /ColorSpace /DeviceGray /BitsPerComponent 1 /Filter [/ASCIIHexDecode /FlateDecode] /Length 1785 >>
+stream
+78daed985d48145114c7e9557aa828ec250894ac350a1fc487280934db3e31dd42447ac9ca20425a5d4a74a087d022240cd37d11321331f4a14011f44208b22d29928b84e892124b8a3bad5f938e33a7f96edddd3bb3bb41089edfc3dcbb33f77fefcc3de7dc7bf602ec304e8a0023002223d5c76015c00b041a493c5271fe961d263cb962fed322e86f2d6ef10cb4a6c2fbb72d0df168531a60743d77d371bd0806321deeb98127ed50ff71b63b0eaded5e034c8c934d477129b8bb0e1c5c70bb3ba1fedd9bae385e3af3b11da6bdb9522f5fe10b3fd4effdecef83cd9e99a97827cc6fd47840761ab4c05802c835572ea5b5d19ed46758688319b4715766db2dde3898467bb2f2acd3423b1b408b2389b266d9626e8ce6f04b53a76f5f36d572a547588ad67bf7f005f39d634f650125165ecc775c31ffaa92caab9427adb68e0af3711f95df41bf40126359b08c23ba362bfd9b85f668014d5bb63bdb426b73d1b485c75f5aec2936dab83c0c5964611cb0f1246608128e8b4b5a1ae2ac52a0456aeec69dcbb3d232b1efff6238a793496edcdf10cab31a3744e95b405f41b61deb59c96bb97fd13e4c5e1bca41bb21881ac0f2fefb037865d71981bfd7265ecee94ce19b3d9236e59473af145113f6134df2d5d906d06c4f1fdf75cd74935c7fe505f8fea9afca9121a94a2a5e030c5fbc44001abbcb7d1d87ccb5fb9f03fcdc97935d286987cf1e4b957af09c97b43d15f9beec0fa65ae56050200c59969a8d4e11f91fe0b4f2e44102ab0ffa0db243a09fa4f76aa5116fa2f15b0d10b2ace7ae5a276b4667442f6f6815ed608a30bd1ca386d8e4562db7a16b07b57246d83aee34f082aa257a93335a39aa6b1bb5722ce25b7c242adfaed12a6c1f3a4142b0e1554ebbe152ed44349f1217b748a28f2505016eaa3db09a83f19013de5e543a5c88b51a072020282296d19d537715cd96ae5ae99dc82244ff81e4441e561591c0328c7a7461387850be4c4a1fc110203cfb9fe775bb1da2887e23feaa79e5d0c91f7ef41434b3af284da136ad75f26c46ac3975a6f615786e508979d167dc22867d67e425886adf2ac99fd4f5a23ac6048b68df3088a8d798a8851bb8b258099151113614db49dc1723ba803aae56b12fa3d8578cb4af58d3ab4d86d486e323e2976514fb0628f6158c898c91062a5bcba420db5740fb22088220088220088220088220088220088220088220088220088220ff8f3f5707196a>
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> /XObject << /Im1 7 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 837 >>
+stream
+0.10 0.21 0.34 rg BT /F2 11 Tf 36 790 Td (CADASTRO DE CLIENTES E ANIMAIS) Tj ET
+BT /F2 24 Tf 36 753 Td (1. Clientes) Tj ET
+0 0 0 rg
+q 523 0 0 330.14 36 390 cm /Im1 Do Q
+0.5 0.5 0.5 RG 36 390 523 330.14 re S
+BT /F1 9 Tf 36 375 Td (Tela de demonstra\347\343o) Tj ET
+BT /F1 12 Tf 36 342 Td (Abra Clientes e informe nome e CPF \(obrigat\363rios\).) Tj ET
+BT /F1 12 Tf 36 319 Td (Preencha os demais campos e clique em Salvar.) Tj ET
+BT /F1 12 Tf 36 296 Td (Selecione um registro para alterar seus dados.) Tj ET
+BT /F1 12 Tf 36 273 Td (Use Desativar ou Reativar e confirme a opera\347\343o.) Tj ET
+BT /F1 12 Tf 36 250 Td (Marque Mostrar inativos para localizar registros desativados.) Tj ET
+BT /F1 12 Tf 36 227 Td (Informe datas no formato dd/MM/aaaa.) Tj ET
+BT /F1 10 Tf 36 30 Td (Manual do usu\341rio) Tj ET
+BT /F1 10 Tf 535 30 Td (2) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /XObject /Subtype /Image /Width 480 /Height 303 /ColorSpace /DeviceGray /BitsPerComponent 1 /Filter [/ASCIIHexDecode /FlateDecode] /Length 1395 >>
+stream
+78daed984f4814511cc7cfd5a13f2676eb144b444850788a392db49181e916d2413a14e8b90e11f92030340f8244b9db41d80d17313c64b0ba817391c4165b4a2d62d30143a2649b08639399d95f1386f8deb6bf9d492156bf9fc332bb33df37bff7beeff77bef2dd10ea3b64034495410ee75867e10a549a71edd8bb4f0e55a33cd86b442f06e238d469afaa652911a7af2b8afcb8b7677374ddcd4ecf0c5464a1d0b473fa6eec4a9f3d9e290076d5b5b84261a743bdc7499a283d58796a3d104750ec4063d04adb567e9435a735b99a1696b7c34fdd248923dbc90f53a60c6fa954500fc6562f8e43b51ff5a0272fc24eaf954aced0c54f59e2fa7a598363672e4b0f4d337b1b2189f8967ca499d217d6c69ba458965e55ea22ab6b7ac3626ba3a8ecbef75d672b86cc8646ec20b13d3115404ab79f723f7e74b66c3e47dbe9e2b25b192f3444bfaadf6913aa2b7efb547442fa66cb70ef5b60e64036fd814b3eea75ded59fdfafe04d16cf3d1874413a173eebaff60d7d5d71dfb58ad73b09be8f385e48d70c0d55e69ad71b57bceb8da9ea1e0dca9d3ac76f5a4abcd1da8ab6ea8257a151a74b50bf5bfb5c3f5c1b9134f85a741cb63de0040b42ce7a59c3db69f35d271b896e74df944604a6fb24d79ef93931e56a46acc991626aafcb8c1adeb0ed723ec01fe619baa0eda25d93dd35719161b678963f66f6c8a2ff4ce6d21fbac4b6108be8326d75f51f10e2a1e6536730c29ca20e1d95fc39402f1e5af5a7c587f4d366643797cdbf9fb55df9a636671d349765735a56afdf84b9cbf82f797edaf51f9fe129bbf9b42e3fc5558d005e3023fcc967cdfb24ad7fd627ff3a2f476601bfaeb8bfcd6f96bbc63d76639cb26e5bb05e1c35f8502b7dddbe9fe16e5119775bcbffc3fd68abffc12e3cb5fa53ec35f000000000000000000000000000000000000000000000000000000f85ffc02c8663822>
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> /XObject << /Im1 10 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 768 >>
+stream
+0.10 0.21 0.34 rg BT /F2 11 Tf 36 790 Td (CADASTRO DE CLIENTES E ANIMAIS) Tj ET
+BT /F2 24 Tf 36 753 Td (2. Ra\347as) Tj ET
+0 0 0 rg
+q 523 0 0 330.14 36 390 cm /Im1 Do Q
+0.5 0.5 0.5 RG 36 390 523 330.14 re S
+BT /F1 9 Tf 36 375 Td (Tela de demonstra\347\343o) Tj ET
+BT /F1 12 Tf 36 342 Td (Abra Ra\347as, informe o nome e selecione Cachorro ou Gato.) Tj ET
+BT /F1 12 Tf 36 319 Td (Clique em Salvar para cadastrar.) Tj ET
+BT /F1 12 Tf 36 296 Td (Selecione uma ra\347a na tabela para alterar suas informa\347\365es.) Tj ET
+BT /F1 12 Tf 36 273 Td (Use Desativar ou Reativar para modificar o status.) Tj ET
+BT /F1 12 Tf 36 250 Td (O nome da ra\347a deve ser \372nico para cada tipo.) Tj ET
+BT /F1 10 Tf 36 30 Td (Manual do usu\341rio) Tj ET
+BT /F1 10 Tf 535 30 Td (3) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /XObject /Subtype /Image /Width 480 /Height 303 /ColorSpace /DeviceGray /BitsPerComponent 1 /Filter [/ASCIIHexDecode /FlateDecode] /Length 1931 >>
+stream
+78daed994f4814511cc73b54072fa1b85987f05026151404e22162f1202445696ae1a5bdf407edd0a510247cd049f3e04132dd430b1a8a580a1228420e8520662592e2c17248292b89f14feeb8cecefb357fdeac33ebcc7359c9047f9f833bb3f3be6f9eeffbfbfdde9b59805dc6190a30044089763c0a2b00232040bd908894feba5d06e3c37e9abfbf18fa9a4b9a86fb9b33e0c5f3a6da44b42975f031e28f966adafe53a5c1d9fe47ad50f36aa633016d4545338c8f09515f6131043b7c87e683c176a8696be94860d0feea29f832e28710fd041f9481be9177622f44bba6a7129d303176a40082300220272b5d24f21c37defd4676ba2217eda9e448dfd09ecb1eda05221796108e76961e1df5b8b40a8bc5853cad4c5b0e785c5213487082f1846c2b4bdacac00dc98077e42ed564f3b565597b87333db270a6959f0a87cf97f844f76b7f1eb7f3b56359254f32d15b64fb30f7449ced23e7d2b2a2d7fd06ef78cee5688febdaa7deebe08cb73692ab0faade7b1dfcc1b9ef49fdbedddeebe0598c09649bd1c23994a47421c44d512ee1dad482b424b76ee197e957f292d42ed61e7cdfe04f7ab6540c186467c17994143709d788aefd06c6520a43c6a676c858941b22b0d923aad238ac6953cedd4fd556daf182d30dfadf9b5a45682c3836b6ef2a373dd5f41180af6f7b1f9466ebaa726d291ebc78492b25f59db726728e70b591f43a809f69b9be224d3b98772243efe182a6ed2acf9fc8e9215b9db37faa45901db6fd4e70858b7bac5c333f24675250b3078135979c9a3b82e3be2b77d9e90a59ff96aaafabcc0e2db199d07eb66b56cc714cb23d8bc2467bc368952d98a23589d886039fe7cdcf55ebf6ce3dcb35a3719bfb3f1a5508064a12d55125d6a9399fec9da54a8da0884daae944382e02d94b4a5108e8dda8965d14a2b6a8bd27b02f098b08f68cc53e2b8d969485c08a6b8c2fcbc43166757d548abdb1a46ecc0b750ebdd688ff25e4b7639e582e85dd0b8f28c99277cf93a23d8737f439f01004edf0bb7b1123a2dd5fcb3229c0b42aa8f634778c42258e88dda558f393d02f5d61f79d91e5af5a0d2e56aeb9fb6b9d0bd5babf545e767f93022efe4215b353f3570f13d92c0d42dc3ad40be8af2d4bcda3ee58fec62592dd5f368fd4aaa682304fbd6f41886bfe0ab15a1e92803ef3584524d365a7bf7e4b2bc6bd4573d6e6c07ff137b2338c95c0bd6c3a1ac46d6ae2ebf3a8e0f057a6469155a863d748a9e09abfc4ee2f4cc77cb03754244974f19782c3dfeba29bc70a5b02e67063862008822008822008822008822008822008822008822008822008b215fe025a9e192c>
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> /XObject << /Im1 13 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 860 >>
+stream
+0.10 0.21 0.34 rg BT /F2 11 Tf 36 790 Td (CADASTRO DE CLIENTES E ANIMAIS) Tj ET
+BT /F2 24 Tf 36 753 Td (3. Animais) Tj ET
+0 0 0 rg
+q 523 0 0 330.14 36 390 cm /Im1 Do Q
+0.5 0.5 0.5 RG 36 390 523 330.14 re S
+BT /F1 9 Tf 36 375 Td (Tela de demonstra\347\343o) Tj ET
+BT /F1 12 Tf 36 342 Td (Abra Animais e selecione o cliente e a ra\347a ativos.) Tj ET
+BT /F1 12 Tf 36 319 Td (Informe nome, sexo, nascimento, cor e observa\347\365es.) Tj ET
+BT /F1 12 Tf 36 296 Td (Clique em Salvar.) Tj ET
+BT /F1 12 Tf 36 273 Td (Selecione um animal na tabela para editar ou alterar seu status.) Tj ET
+BT /F1 12 Tf 36 250 Td (Se um v\355nculo estiver inativo, reative-o ou selecione um novo v\355nculo.) Tj ET
+BT /F1 12 Tf 36 227 Td (Confira o propriet\341rio e a ra\347a antes de salvar.) Tj ET
+BT /F1 10 Tf 36 30 Td (Manual do usu\341rio) Tj ET
+BT /F1 10 Tf 535 30 Td (4) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /XObject /Subtype /Image /Width 480 /Height 303 /ColorSpace /DeviceGray /BitsPerComponent 1 /Filter [/ASCIIHexDecode /FlateDecode] /Length 1353 >>
+stream
+78daed984d68134118860fde7a6d0f9efd41aa88274f22b958c493601b41147a52b00773ec2192811e245aa1488824bd44daa29896068a859243e722480d2ac5961e4a33501041290bb561adc9cee792666792ec64d9e849f33e971d76f69d9decfbfd0c21ea312e48a2774492b9e34f54212a11a7291e462abfddbb451b6b1139f4689856b22399b562f6182dcc651e87d1f64dd2c7c3482d7a73988ae7a29993c589594abed99d0fa11d1bcbd2c63aaf45476e537270e0f8e4f4b4ab7d39f33ac4a623896dda2945dc553ed387eac04ae9bd48516db1bc1df6830935aa12f8cf10953f14ee13e56c6241517ba5d3ec7ef24c7ffac4d500adf3b6d3ccc1eeec4ea52f58dbe9bd074f5ef5a707af07edf90e4202fcb3385d3cfb93a452a4dcca6e77a1ad3e3b9b62e4bc789a237a7eedd4fae91b2cbcf64b7ec97d6f7ec16db953f37737cf5f0eaf3d4ccf4c30aae593ae76f1fed0e6c525d6f537cafdc5f7e50831d00bb090754627c4961ac584fff955bd72c19b1e2f30df0933a1565e8e7b5aa967d5fb98da61b9a267d55ee2412756e1785aa9b40f84a150ed853c160385d5b8ea66220da114338cdc822e795b24e9e8e29cf922d3d2c34bd20b4975cfb2d40ea4ff98c7c65b02e2e862f9c35f1a4abeec5977f7ba6e89da5fcbfe6eb7678ec95f32f94b3cde70e7877767d5e201fe4694bf36e3cca96b85e184037fcdfe86fd73c0e4af2e8c7ccb0af2970cfe36b5027ffe3293bfa3eed2566b3839cc0ef0b277fdadff76d6fa99757d1686ee1f6bee7795a3099d974db913ec2f7bc80a6d0df9504d974dfeea5c65ee1e46eb4e57fd1b2cc35fa3bf96c10711dc7f8568f8fbab29bd95d6d47f9bfc4d78fe7e5539a8d2d6589f5bfd6d3b4b2d272ce42f00000000000000000000000000000000000000000000000000000000005af80d6f2b41dd>
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> /XObject << /Im1 16 0 R >> >> /Contents 18 0 R >>
+endobj
+18 0 obj
+<< /Length 745 >>
+stream
+0.10 0.21 0.34 rg BT /F2 11 Tf 36 790 Td (CADASTRO DE CLIENTES E ANIMAIS) Tj ET
+BT /F2 24 Tf 36 753 Td (4. Consulta por cliente) Tj ET
+0 0 0 rg
+q 523 0 0 330.14 36 390 cm /Im1 Do Q
+0.5 0.5 0.5 RG 36 390 523 330.14 re S
+BT /F1 9 Tf 36 375 Td (Tela de demonstra\347\343o) Tj ET
+BT /F1 12 Tf 36 342 Td (Abra Consulta por Cliente.) Tj ET
+BT /F1 12 Tf 36 319 Td (Informe o nome, o CPF ou ambos e clique em Consultar.) Tj ET
+BT /F1 12 Tf 36 296 Td (Confira nome do animal, ra\347a, idade, sexo e status.) Tj ET
+BT /F1 12 Tf 36 273 Td (Marque Mostrar inativos para ampliar os resultados.) Tj ET
+BT /F1 12 Tf 36 250 Td (Clique em Limpar para remover os filtros.) Tj ET
+BT /F1 10 Tf 36 30 Td (Manual do usu\341rio) Tj ET
+BT /F1 10 Tf 535 30 Td (5) Tj ET
+endstream
+endobj
+19 0 obj
+<< /Type /XObject /Subtype /Image /Width 480 /Height 303 /ColorSpace /DeviceGray /BitsPerComponent 1 /Filter [/ASCIIHexDecode /FlateDecode] /Length 1001 >>
+stream
+78daeddb3f481b611cc6f145419cfcc3c57632852094562da88bcb911245c4d2eae52aa2e06233e82472088a1e28885541431a69a2531b2cad5307512226830689a795a2dba181333a585269d3186cf47e8d3438df9bc125cf677a87fbde5df2de70f772479463aa75a26d225d4e8ff72941a4509066034652fddcd14187615e6f981068cd637f1ff67bca68c657f0d6485b384ddfaef86bf1b540fe27a2f7c43ff69126cd1f960db4bdbd1e3afc1ebc16ed9de4fdcc3df8e1f57ea249df9881e3123faad291c2a7f772407ba9c09ab21359a53f4bc7aad13f2c72374a11000000c0bdd0799e6eb28d354bf4b4c935e0129cd64ad6f6cafff7e6f9d7feb976b7c8dc6a15676f9a5d3507a59c68616d939797c90b75585d251ac1f403000000e410996df3df72f2fffd2329ec6d786b716aa9f8a1f9a5526f2d192d67697f85925d5fcc9e0e7bf7e604d71e606a137b5bbbcb3de3adf67db54234c93cd349c7f4231a4c3f20446e7fad8ceb05000000000000000000204704e5cc208b1757d7fb367e92b4b050151f8ab1b6c55677b4edf13ba7597b66656d39d1146a7b6ae21ca99516d6f654ac0d0995f36e9f26bdc0ec030000000000004082325ff666b136529679d78e8fb3b752912dfaead19cd392c5da8894df78bb36e276a4566cac2d57971712d2ad45935a30fb000000f00f8c09386e>
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> /XObject << /Im1 19 0 R >> >> /Contents 21 0 R >>
+endobj
+21 0 obj
+<< /Length 855 >>
+stream
+0.10 0.21 0.34 rg BT /F2 11 Tf 36 790 Td (CADASTRO DE CLIENTES E ANIMAIS) Tj ET
+BT /F2 24 Tf 36 753 Td (5. Relat\363rios) Tj ET
+0 0 0 rg
+q 523 0 0 330.14 36 390 cm /Im1 Do Q
+0.5 0.5 0.5 RG 36 390 523 330.14 re S
+BT /F1 9 Tf 36 375 Td (Tela de demonstra\347\343o) Tj ET
+BT /F1 12 Tf 36 342 Td (Abra Relat\363rios e selecione o tipo desejado.) Tj ET
+BT /F1 12 Tf 36 319 Td (Escolha o m\352s para os relat\363rios de aniversariantes.) Tj ET
+BT /F1 12 Tf 36 296 Td (Clique no bot\343o correspondente ao relat\363rio.) Tj ET
+BT /F1 12 Tf 36 273 Td (Escolha o nome e o local de grava\347\343o do arquivo TXT.) Tj ET
+BT /F1 12 Tf 36 250 Td (Abra o arquivo em um editor de texto.) Tj ET
+BT /F1 12 Tf 36 227 Td (Os relat\363rios s\343o gerados a partir dos dados do banco.) Tj ET
+BT /F1 10 Tf 36 30 Td (Manual do usu\341rio) Tj ET
+BT /F1 10 Tf 535 30 Td (6) Tj ET
+endstream
+endobj
+xref
+0 22
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000149 00000 n 
+0000000246 00000 n 
+0000000348 00000 n 
+0000000485 00000 n 
+0000001607 00000 n 
+0000003581 00000 n 
+0000003743 00000 n 
+0000004630 00000 n 
+0000006215 00000 n 
+0000006380 00000 n 
+0000007199 00000 n 
+0000009320 00000 n 
+0000009485 00000 n 
+0000010396 00000 n 
+0000011939 00000 n 
+0000012104 00000 n 
+0000012900 00000 n 
+0000014091 00000 n 
+0000014256 00000 n 
+trailer
+<< /Size 22 /Root 1 0 R >>
+startxref
+15162
+%%EOF
