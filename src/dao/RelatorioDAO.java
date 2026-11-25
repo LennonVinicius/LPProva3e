@@ -19,37 +19,45 @@ public class RelatorioDAO {
     private static final String LINHA = "------------------------------------------------------------";
 
     public int gerarClientesEAnimais(Path arquivo) throws SQLException, IOException {
-        String sql = "SELECT c.nome AS cliente, c.cpf, a.nome AS animal, r.nome_raca, a.data_nascimento "
-                + "FROM cliente c LEFT JOIN animal a ON a.id_cliente = c.id_cliente AND a.status = TRUE AND EXISTS (SELECT 1 FROM raca rr WHERE rr.id_raca = a.id_raca AND rr.status = TRUE) "
-                + "LEFT JOIN raca r ON r.id_raca = a.id_raca "
-                + "WHERE c.status = TRUE ORDER BY c.nome, c.id_cliente, a.nome";
+        String sqlClientes = "SELECT id_cliente, nome, cpf FROM cliente WHERE status = TRUE ORDER BY nome, id_cliente";
+        String sqlAnimais = "SELECT a.nome, r.nome_raca, a.data_nascimento FROM animal a "
+                + "JOIN raca r ON a.id_raca = r.id_raca "
+                + "WHERE a.id_cliente = ? AND a.status = TRUE AND r.status = TRUE ORDER BY a.nome";
         int clientes = 0;
+
         try (Connection con = ConnectionFactory.getConnection();
-             PreparedStatement ps = con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery();
+             PreparedStatement psClientes = con.prepareStatement(sqlClientes);
+             PreparedStatement psAnimais = con.prepareStatement(sqlAnimais);
+             ResultSet rsClientes = psClientes.executeQuery();
              BufferedWriter w = Files.newBufferedWriter(arquivo, StandardCharsets.UTF_8)) {
+
             w.write("RELATÓRIO - TODOS OS CLIENTES E SEUS ANIMAIS");
             w.newLine();
             w.write(LINHA);
             w.newLine();
-            String atual = null;
-            while (rs.next()) {
-                String cpf = rs.getString("cpf");
-                if (!cpf.equals(atual)) {
-                    atual = cpf;
-                    clientes++;
-                    w.newLine();
-                    w.write("Cliente: " + rs.getString("cliente") + " | CPF: " + CpfValidador.formatar(cpf));
-                    w.newLine();
-                }
-                String animal = rs.getString("animal");
-                if (animal == null) {
-                    w.write("   (sem animais cadastrados)");
-                } else {
-                    w.write("   Animal: " + animal + " | Raça: " + rs.getString("nome_raca")
-                            + " | Nascimento: " + Datas.formatar(Datas.deSql(rs.getDate("data_nascimento"))));
-                }
+
+            while (rsClientes.next()) {
+                clientes++;
                 w.newLine();
+                w.write("Cliente: " + rsClientes.getString("nome")
+                        + " | CPF: " + CpfValidador.formatar(rsClientes.getString("cpf")));
+                w.newLine();
+
+                psAnimais.setInt(1, rsClientes.getInt("id_cliente"));
+                try (ResultSet rsAnimais = psAnimais.executeQuery()) {
+                    boolean temAnimais = false;
+                    while (rsAnimais.next()) {
+                        temAnimais = true;
+                        w.write("   Animal: " + rsAnimais.getString("nome")
+                                + " | Raça: " + rsAnimais.getString("nome_raca")
+                                + " | Nascimento: " + Datas.formatar(Datas.deSql(rsAnimais.getDate("data_nascimento"))));
+                        w.newLine();
+                    }
+                    if (!temAnimais) {
+                        w.write("   (sem animais cadastrados)");
+                        w.newLine();
+                    }
+                }
             }
         }
         return clientes;

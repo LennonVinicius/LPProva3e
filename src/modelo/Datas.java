@@ -4,24 +4,34 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.ResolverStyle;
 
 public class Datas {
 
-    public static final DateTimeFormatter FORMATO = DateTimeFormatter.ofPattern("dd/MM/uuuu");
+    public static final DateTimeFormatter FORMATO = DateTimeFormatter.ofPattern("dd/MM/uuuu").withResolverStyle(ResolverStyle.STRICT);
 
     private Datas() {
     }
 
     public static LocalDate deSql(Date data) {
-        return data == null ? null : data.toLocalDate();
+        if (data == null) {
+            return null;
+        }
+        return data.toLocalDate();
     }
 
     public static Date paraSql(LocalDate data) {
-        return data == null ? null : Date.valueOf(data);
+        if (data == null) {
+            return null;
+        }
+        return Date.valueOf(data);
     }
 
     public static String formatar(LocalDate data) {
-        return data == null ? "" : data.format(FORMATO);
+        if (data == null) {
+            return "";
+        }
+        return data.format(FORMATO);
     }
 
     public static LocalDate converter(String texto) {
@@ -29,7 +39,7 @@ public class Datas {
             return null;
         }
         try {
-            LocalDate data = LocalDate.parse(texto.trim(), FORMATO.withResolverStyle(java.time.format.ResolverStyle.STRICT));
+            LocalDate data = LocalDate.parse(texto.trim(), FORMATO);
             if (data.isAfter(LocalDate.now())) {
                 throw new IllegalArgumentException("A data de nascimento não pode ser futura.");
             }

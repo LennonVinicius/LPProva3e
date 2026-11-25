@@ -85,8 +85,11 @@ public class RacaDAO {
     }
 
     public List<Raca> listar(boolean incluirInativos) throws SQLException {
-        String sql = "SELECT id_raca, nome_raca, tipo_animal, status FROM raca"
-                + (incluirInativos ? "" : " WHERE status = TRUE") + " ORDER BY tipo_animal, nome_raca";
+        String sql = "SELECT id_raca, nome_raca, tipo_animal, status FROM raca";
+        if (!incluirInativos) {
+            sql += " WHERE status = TRUE";
+        }
+        sql += " ORDER BY tipo_animal, nome_raca";
         List<Raca> lista = new ArrayList<>();
         try (Connection con = ConnectionFactory.getConnection();
              PreparedStatement ps = con.prepareStatement(sql);

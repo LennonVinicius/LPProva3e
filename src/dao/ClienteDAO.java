@@ -34,6 +34,7 @@ public class ClienteDAO {
         if (!CpfValidador.validar(c.getCpf())) {
             throw new IllegalArgumentException("CPF inválido.");
         }
+        c.setCpf(CpfValidador.somenteDigitos(c.getCpf()));
         if (cpfDuplicado(c.getCpf(), c.getId())) {
             throw new IllegalArgumentException("Já existe um cliente cadastrado com este CPF.");
         }
@@ -103,7 +104,11 @@ public class ClienteDAO {
     }
 
     public List<Cliente> listar(boolean incluirInativos) throws SQLException {
-        String sql = "SELECT " + COLUNAS + " FROM cliente" + (incluirInativos ? "" : " WHERE status = TRUE") + " ORDER BY nome";
+        String sql = "SELECT " + COLUNAS + " FROM cliente";
+        if (!incluirInativos) {
+            sql += " WHERE status = TRUE";
+        }
+        sql += " ORDER BY nome";
         List<Cliente> lista = new ArrayList<>();
         try (Connection con = ConnectionFactory.getConnection();
              PreparedStatement ps = con.prepareStatement(sql);

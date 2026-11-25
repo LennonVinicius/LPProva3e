@@ -42,35 +42,62 @@ CREATE TABLE IF NOT EXISTS animal (
     CONSTRAINT ck_sexo CHECK (sexo IN ('M', 'F'))
 );
 
-INSERT INTO cliente (nome, cpf, data_nascimento, telefone, endereco, bairro, cidade, estado, cep)
-SELECT dados.nome, dados.cpf, dados.nascimento, dados.telefone, dados.endereco, dados.bairro, dados.cidade, dados.estado, dados.cep
-FROM (
-    SELECT 'Carlos Almeida' AS nome, '52998224725' AS cpf, '1985-03-12' AS nascimento, '(12) 99111-2233' AS telefone, 'Rua das Flores, 120' AS endereco, 'Centro' AS bairro, 'São José dos Campos' AS cidade, 'SP' AS estado, '12210-000' AS cep
-    UNION ALL SELECT 'Mariana Souza', '11144477735', '1992-11-25', '(12) 99222-3344', 'Av. Cassiano Ricardo, 800', 'Jardim Aquarius', 'São José dos Campos', 'SP', '12246-870'
-    UNION ALL SELECT 'Roberto Lima', '12345678909', '1978-03-30', '(12) 99333-4455', 'Rua Sete de Setembro, 45', 'Vila Industrial', 'São José dos Campos', 'SP', '12220-100'
-) dados
-WHERE NOT EXISTS (SELECT 1 FROM cliente c WHERE c.cpf = dados.cpf);
+INSERT INTO cliente (nome, cpf, data_nascimento, telefone, endereco, bairro, cidade, estado, cep) VALUES
+('Carlos Almeida', '52998224725', '1985-03-12', '(12) 99111-2233', 'Rua das Flores, 120', 'Centro', 'São José dos Campos', 'SP', '12210-000'),
+('Mariana Souza', '11144477735', '1992-11-25', '(12) 99222-3344', 'Av. Cassiano Ricardo, 800', 'Jardim Aquarius', 'São José dos Campos', 'SP', '12246-870'),
+('Roberto Lima', '12345678909', '1978-03-30', '(12) 99333-4455', 'Rua Sete de Setembro, 45', 'Vila Industrial', 'São José dos Campos', 'SP', '12220-100')
+ON DUPLICATE KEY UPDATE cpf = cliente.cpf;
 
-INSERT INTO raca (nome_raca, tipo_animal)
-SELECT dados.nome, dados.tipo FROM (
-    SELECT 'Labrador' AS nome, 'Cachorro' AS tipo
-    UNION ALL SELECT 'Poodle', 'Cachorro'
-    UNION ALL SELECT 'SRD', 'Cachorro'
-    UNION ALL SELECT 'Siamês', 'Gato'
-    UNION ALL SELECT 'Persa', 'Gato'
-    UNION ALL SELECT 'SRD', 'Gato'
-) dados
-WHERE NOT EXISTS (SELECT 1 FROM raca r WHERE r.nome_raca = dados.nome AND r.tipo_animal = dados.tipo);
+INSERT INTO raca (nome_raca, tipo_animal) VALUES
+('Labrador', 'Cachorro'),
+('Poodle', 'Cachorro'),
+('SRD', 'Cachorro'),
+('Siamês', 'Gato'),
+('Persa', 'Gato'),
+('SRD', 'Gato')
+ON DUPLICATE KEY UPDATE nome_raca = raca.nome_raca;
 
 INSERT INTO animal (nome, data_nascimento, sexo, cor, observacoes, id_cliente, id_raca)
-SELECT dados.nome, dados.nascimento, dados.sexo, dados.cor, dados.observacoes, c.id_cliente, r.id_raca
-FROM (
-    SELECT 'Thor' AS nome, '2019-03-05' AS nascimento, 'M' AS sexo, 'Caramelo' AS cor, 'Muito brincalhão' AS observacoes, '52998224725' AS cpf, 'Labrador' AS raca, 'Cachorro' AS tipo
-    UNION ALL SELECT 'Luna', '2021-11-10', 'F', 'Branca', 'Alérgica a shampoo comum', '11144477735', 'Poodle', 'Cachorro'
-    UNION ALL SELECT 'Mia', '2020-03-20', 'F', 'Cinza', NULL, '11144477735', 'Siamês', 'Gato'
-    UNION ALL SELECT 'Bob', '2018-07-14', 'M', 'Preto', 'Idoso', '12345678909', 'SRD', 'Cachorro'
-    UNION ALL SELECT 'Nina', '2022-11-02', 'F', 'Tigrada', NULL, '52998224725', 'SRD', 'Gato'
-) dados
-JOIN cliente c ON c.cpf = dados.cpf
-JOIN raca r ON r.nome_raca = dados.raca AND r.tipo_animal = dados.tipo
-WHERE NOT EXISTS (SELECT 1 FROM animal a WHERE a.id_cliente = c.id_cliente AND a.nome = dados.nome AND a.data_nascimento = dados.nascimento);
+SELECT 'Thor', '2019-03-05', 'M', 'Caramelo', 'Muito brincalhão', c.id_cliente, r.id_raca
+FROM cliente c, raca r
+WHERE c.cpf = '52998224725' AND r.nome_raca = 'Labrador' AND r.tipo_animal = 'Cachorro'
+AND NOT EXISTS (
+    SELECT 1 FROM animal a
+    WHERE a.id_cliente = c.id_cliente AND a.nome = 'Thor' AND a.data_nascimento = '2019-03-05'
+);
+
+INSERT INTO animal (nome, data_nascimento, sexo, cor, observacoes, id_cliente, id_raca)
+SELECT 'Luna', '2021-11-10', 'F', 'Branca', 'Alérgica a shampoo comum', c.id_cliente, r.id_raca
+FROM cliente c, raca r
+WHERE c.cpf = '11144477735' AND r.nome_raca = 'Poodle' AND r.tipo_animal = 'Cachorro'
+AND NOT EXISTS (
+    SELECT 1 FROM animal a
+    WHERE a.id_cliente = c.id_cliente AND a.nome = 'Luna' AND a.data_nascimento = '2021-11-10'
+);
+
+INSERT INTO animal (nome, data_nascimento, sexo, cor, observacoes, id_cliente, id_raca)
+SELECT 'Mia', '2020-03-20', 'F', 'Cinza', NULL, c.id_cliente, r.id_raca
+FROM cliente c, raca r
+WHERE c.cpf = '11144477735' AND r.nome_raca = 'Siamês' AND r.tipo_animal = 'Gato'
+AND NOT EXISTS (
+    SELECT 1 FROM animal a
+    WHERE a.id_cliente = c.id_cliente AND a.nome = 'Mia' AND a.data_nascimento = '2020-03-20'
+);
+
+INSERT INTO animal (nome, data_nascimento, sexo, cor, observacoes, id_cliente, id_raca)
+SELECT 'Bob', '2018-07-14', 'M', 'Preto', 'Idoso', c.id_cliente, r.id_raca
+FROM cliente c, raca r
+WHERE c.cpf = '12345678909' AND r.nome_raca = 'SRD' AND r.tipo_animal = 'Cachorro'
+AND NOT EXISTS (
+    SELECT 1 FROM animal a
+    WHERE a.id_cliente = c.id_cliente AND a.nome = 'Bob' AND a.data_nascimento = '2018-07-14'
+);
+
+INSERT INTO animal (nome, data_nascimento, sexo, cor, observacoes, id_cliente, id_raca)
+SELECT 'Nina', '2022-11-02', 'F', 'Tigrada', NULL, c.id_cliente, r.id_raca
+FROM cliente c, raca r
+WHERE c.cpf = '52998224725' AND r.nome_raca = 'SRD' AND r.tipo_animal = 'Gato'
+AND NOT EXISTS (
+    SELECT 1 FROM animal a
+    WHERE a.id_cliente = c.id_cliente AND a.nome = 'Nina' AND a.data_nascimento = '2022-11-02'
+);
